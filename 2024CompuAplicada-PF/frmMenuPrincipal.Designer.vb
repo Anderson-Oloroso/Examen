@@ -22,28 +22,17 @@ Partial Class frmMenuPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.UsuariosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AAdministradorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EncargadoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.OperadorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msusario = New System.Windows.Forms.ToolStripContainer()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.msusario.TopToolStripPanel.SuspendLayout()
         Me.msusario.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'txtnombre
-        '
-        Me.txtnombre.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtnombre.Location = New System.Drawing.Point(114, 61)
-        Me.txtnombre.Multiline = True
-        Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(119, 37)
-        Me.txtnombre.TabIndex = 0
-        Me.txtnombre.Text = "USUARIOS"
-        Me.txtnombre.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'MenuStrip1
         '
@@ -106,13 +95,23 @@ Partial Class frmMenuPrincipal
         '
         Me.msusario.TopToolStripPanel.Controls.Add(Me.MenuStrip1)
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Algerian", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(119, 79)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(114, 21)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "USUARIOS:"
+        '
         'frmMenuPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(348, 375)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.msusario)
-        Me.Controls.Add(Me.txtnombre)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "frmMenuPrincipal"
         Me.Text = "Menú"
@@ -126,12 +125,11 @@ Partial Class frmMenuPrincipal
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents txtnombre As TextBox
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents msusario As ToolStripContainer
     Friend WithEvents UsuariosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AAdministradorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EncargadoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents OperadorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class
